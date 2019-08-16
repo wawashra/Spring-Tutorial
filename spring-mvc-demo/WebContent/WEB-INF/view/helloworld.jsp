@@ -4,6 +4,6 @@
 <title>hello world</title>
 </head>
 <body>
-<p>Hello World ! Welcome ${param.name}</p>
+<p>Hello World ! Welcome ${message}</p>
 </body>
 </html>
