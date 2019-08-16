@@ -1,10 +1,9 @@
 package com.luv2code.springdemo;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -22,11 +21,8 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping("/processFormv2")
-	public String letsShoutDude(HttpServletRequest request, Model model) {
-		
-		// read the request parameter from the html form
-		String theName = request.getParameter("name");
-		
+	public String letsShoutDude(@RequestParam("name") String theName, Model model) {
+				
 		// convert name to upper case 
 		theName = theName.toUpperCase();
 		
