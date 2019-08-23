@@ -1,6 +1,6 @@
 package com.luv2code.springdemo;
 public class Student {
-	private String firstName,lastName,country;
+	private String firstName,lastName,country,favoriteLanguage;
 	
 	public Student(String firstName, String lastName) {
 		this.firstName = firstName;
@@ -33,6 +33,12 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
 	}
 	
 }

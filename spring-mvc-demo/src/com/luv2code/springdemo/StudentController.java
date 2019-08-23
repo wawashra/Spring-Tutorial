@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StudentController {
 	@Value("#{countryOptions}") 
 	private Map<String, String> countryOptions;
+	
+	@Value("#{favoriteLanguageOptions}") 
+	private Map<String, String> favoriteLanguageOptions;
 
 	@RequestMapping("/showForm")
 	public String showFourm(Model model) {
@@ -23,6 +26,8 @@ public class StudentController {
 		model.addAttribute("student", theStudent);
 	    // add the country options to the model 
 	    model.addAttribute("theCountryOptions", countryOptions); 
+	    // add the favorite Language options to the model 
+	    model.addAttribute("favoriteLanguageOptions", favoriteLanguageOptions); 
 
 		return "student-form";
 	}
