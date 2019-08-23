@@ -16,6 +16,8 @@ public class StudentController {
 	
 	@Value("#{favoriteLanguageOptions}") 
 	private Map<String, String> favoriteLanguageOptions;
+	@Value("#{favoriteOsOptions}") 
+	private Map<String, String> favoriteOsOptions;
 
 	@RequestMapping("/showForm")
 	public String showFourm(Model model) {
@@ -28,6 +30,8 @@ public class StudentController {
 	    model.addAttribute("theCountryOptions", countryOptions); 
 	    // add the favorite Language options to the model 
 	    model.addAttribute("favoriteLanguageOptions", favoriteLanguageOptions); 
+	    // add the favorite Os options to the model 
+	    model.addAttribute("favoriteOsOptions", favoriteOsOptions); 
 
 		return "student-form";
 	}

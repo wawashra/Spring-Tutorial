@@ -1,7 +1,7 @@
 package com.luv2code.springdemo;
 public class Student {
 	private String firstName,lastName,country,favoriteLanguage;
-	
+	private String favoriteOs[];
 	public Student(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -39,6 +39,12 @@ public class Student {
 	}
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
+	}
+	public String[] getFavoriteOs() {
+		return favoriteOs;
+	}
+	public void setFavoriteOs(String favoriteOs[]) {
+		this.favoriteOs = favoriteOs;
 	}
 	
 }
