@@ -5,6 +5,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.luv2code.springdemo.mvc.validation.CourseCode;
+
 public class Customer {
 	@NotNull
 	@Size(min = 1 , message = "is requred")
@@ -14,6 +16,15 @@ public class Customer {
 	@Min(value = 0,message = "must be >= 0 ")
 	@Max(value = 155,message = "must be <= 155 ")
 	private Integer age;
+	@CourseCode(value = "comp",message = "must start with comp")
+	private String courseName;
+	
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
 	public Customer() {
 		
 	}

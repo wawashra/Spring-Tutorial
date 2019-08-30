@@ -14,7 +14,9 @@
 		Age : <form:input path="age"/>
 		<form:errors path="age"></form:errors>
 		<br><br>
-
+		course Name : <form:input path="courseName"/>
+		<form:errors path="courseName"></form:errors>
+		<br><br>
 		<input type="submit" value="Submit"/>
 	</form:form>
 </body>
