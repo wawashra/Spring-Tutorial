@@ -1,4 +1,4 @@
-package com.luv2code.springdemo;
+package com.luv2code.springdemo.mvc;
 
 import java.util.Map;
 
@@ -38,8 +38,6 @@ public class StudentController {
 	
 	@RequestMapping("/processForm")
 	public String processForm(@ModelAttribute("student") Student theStudent) {
-		
-		System.out.println(theStudent);
 		return "student-confirmation";
 	}
 }

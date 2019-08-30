@@ -1,6 +1,9 @@
-package com.luv2code.springdemo;
+package com.luv2code.springdemo.mvc;
 public class Student {
-	private String firstName,lastName,country,favoriteLanguage;
+	private String firstName;
+	private String lastName;
+	private String country;
+	private String favoriteLanguage;
 	private String favoriteOs[];
 	public Student(String firstName, String lastName) {
 		this.firstName = firstName;

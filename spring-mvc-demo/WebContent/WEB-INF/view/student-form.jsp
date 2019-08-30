@@ -5,8 +5,9 @@
 <title>Student registration form</title>
 </head>
 <body>
-	<form:form action="processForm" modelAttribute="student">
+	<form:form action="processForm" modelAttribute="student" method="POST">
 		First name : <form:input path="firstName"/>
+		<form:errors path="firstName"></form:errors>
 		<br><br>
 		Last name : <form:input path="lastName"/>
 		<br><br>
