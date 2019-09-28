@@ -14,6 +14,7 @@ public class CourseCodeValidattorConstraint implements ConstraintValidator<Cours
 	@Override
 	public boolean isValid(String theCode, ConstraintValidatorContext theConstraintValidatorContext) {
 		if(theCode == null) {
+			
 			return true;
 		}else {
 			return theCode.toUpperCase().startsWith(coursePrefixes.toUpperCase());
